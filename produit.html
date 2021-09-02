@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="produit.css">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+
+    <title></title>
+</head>
+<body>
+    <header>
+        <a href="index.html"><h1>Oricono</h1></a>
+        <a href="panier.html"><i class="fas fa-shopping-basket"></i></a>
+    </header>
+
+    <main>
+        <div class="bloc">
+            <div class="fiche-produit">
+                <div class="image">
+                    <img src="" alt="" class="img">
+                </div>
+                <div class="infos">
+                    <div class="titre"></div>
+                    <div class="description"></div>
+                    <div class="prix"></div>
+                    <div class="quantité">
+                        <label for="nombre">Quantité :</label>
+                        <input id="nombre" type="number" name="nombre" value="1" min="1">
+                    </div>
+                    <div class="couleur">
+                        <label for="select">Couleur :</label>
+                        <select name="color" id="select">
+                        </select>
+                    </div>
+                    <div class="confirmation">
+                        <p class="confirmation-text"></p>
+                    </div>
+                    <div class="bouton">
+                        <a href="#">
+                            <div class="panier ajout">
+                                Ajouter au panier
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div class="bloc1">
+        <ul>
+            <li><a class="foot" href="#">Fonctionnement du site</a></li>
+            <li><a class="foot" href="#">Conditions générales de vente</a></li>
+            <li><a class="foot" href="#">Données et confidentialité</a></li>
+        </ul>
+        </div> 
+    </footer>
+
+  
+    <script src="produit.js"></script>
+</body>
+</html>

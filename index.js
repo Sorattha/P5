@@ -1,8 +1,5 @@
-main();
 getArticles();
 
-function main() {
-}
 
 function getArticles() {
   fetch("http://localhost:3000/api/teddies")
@@ -66,7 +63,8 @@ function getArticles() {
     Prix.innerHTML = new Intl.NumberFormat("fr-FR", {
       style: "currency",
       currency: "EUR",
-    }).format(données[article].price);
+    })
+    .format(données[article].price);
 
       }
     });
