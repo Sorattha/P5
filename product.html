@@ -4,34 +4,45 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <link rel="stylesheet" href="produit.css">
+
+     <!--CSS-->
+     
+     <link rel="stylesheet" href="product.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 
     <title></title>
 </head>
 <body>
     <header>
-        <a href="index.html"><h1>Oricono</h1></a>
-        <a href="panier.html"><i class="fas fa-shopping-basket"></i></a>
+        <div class="container-fluid">
+            <div class="header-container">
+                <div class="nav">
+                    <a href="index.html"><h1 class="nav__logo">Oricono</h1></a>
+                    <a href="cart.html"><div class="nav__cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        </div>
+                    </a>
+                    </div>
+            </div>
+        </div>
     </header>
-
     <main>
-        <div class="bloc">
+        <div class="container">
             <div class="fiche-produit">
-                <div class="image">
+                <div class="product-card__img">
                     <img src="" alt="" class="img">
                 </div>
                 <div class="infos">
                     <div class="titre"></div>
                     <div class="description"></div>
                     <div class="prix"></div>
-                    <div class="quantité">
+                    <div class="quantite">
                         <label for="nombre">Quantité :</label>
-                        <input id="nombre" type="number" name="nombre" value="1" min="1">
+                        <input id="nombre" type="nombre" name="nombre" value="1" min="1">
                     </div>
                     <div class="couleur">
-                        <label for="select">Couleur :</label>
-                        <select name="color" id="select">
+                        <label for="color-select">Couleur :</label>
+                        <select name="color" id="color-select">
                         </select>
                     </div>
                     <div class="confirmation">
@@ -39,7 +50,7 @@
                     </div>
                     <div class="bouton">
                         <a href="#">
-                            <div class="panier ajout">
+                            <div class="bouton ajout">
                                 Ajouter au panier
                             </div>
                         </a>
@@ -50,15 +61,15 @@
     </main>
     <footer>
         <div class="bloc1">
-        <ul>
-            <li><a class="foot" href="#">Fonctionnement du site</a></li>
-            <li><a class="foot" href="#">Conditions générales de vente</a></li>
-            <li><a class="foot" href="#">Données et confidentialité</a></li>
-        </ul>
-        </div> 
+            <ul>
+                <li><a class="foot" href="#">Fonctionnement du site</a></li>
+                <li><a class="foot" href="#">Conditions générales de vente</a></li>
+                <li><a class="foot" href="#">Données et confidentialité</a></li>
+            </ul>
+            </div> 
     </footer>
 
   
-    <script src="produit.js"></script>
+    <script src="product.js"></script>
 </body>
 </html>

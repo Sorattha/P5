@@ -5,6 +5,7 @@ function getArticles() {
   fetch("http://localhost:3000/api/teddies")
     .then(function (res) {
       return res.json();
+      console.log(res);
     })
     .catch((error) => {
       let blocproduit = document.querySelector(".bloc-produits");
@@ -28,7 +29,7 @@ function getArticles() {
 
     let lien = document.createElement("a");
     ficheProduit.appendChild(lien);
-    lien.href = `produit.html?id=${données[article]._id}`;
+    lien.href = `produCt.html?id=${données[article]._id}`;
     lien.classList.add("lien-produit");
     
     /* Créer une "div" img et récupérer les images de l'API*/

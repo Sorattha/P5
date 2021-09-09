@@ -1,35 +1,52 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-    <script src="https://kit.fontawesome.com/ec2c0a7975.js" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"/>
-    <title>ORICONO</title>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="styles.css">
-</head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Orinounours</title>
 
+    <!--CSS-->
+    
+    <link rel="stylesheet" href="confirmation.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
+
+</head>
 <body>
     <header>
-        <a href="index.html"><h1>Oricono</h1></a>
-        <i class="fas fa-shopping-basket"></i>
+        <div class="container-fluid">
+            <div class="header-container">
+                <div class="nav">
+                    <a href="index.html"><h1 class="nav__logo">Oricono</h1></a>
+                    <a href="cart.html"><div class="nav__cart">
+                        <i class="fas fa-shopping-cart"></i>
+                    </a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
-
-   <main>
     <main>
-       
+        <div class="recap">
+            <div class="confirm">
+                    <h2>Votre commande a bien été prise en compte</h2>
+                    <p class="total">Le montant total est de <span class="display-price"></span></p>            
+                    <p class="orderid">Votre numéro de commande est : <span class="display-orderid"></span></p>
+            </div>
+        </div>
     </main>
-   
-
     <footer>
         <div class="bloc1">
-        <ul>
-            <li><a class="foot" href="#">Fonctionnement du site</a></li>
-            <li><a class="foot" href="#">Conditions générales de vente</a></li>
-            <li><a class="foot" href="#">Données et confidentialité</a></li>
-        </ul>
-        </div> 
+            <ul>
+                <li><a class="foot" href="#">Fonctionnement du site</a></li>
+                <li><a class="foot" href="#">Conditions générales de vente</a></li>
+                <li><a class="foot" href="#">Données et confidentialité</a></li>
+            </ul>
+            </div> 
     </footer>
+    
+    <script src="confirmation.js"></script>
+    
 
 </body>
-
 </html>
