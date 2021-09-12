@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-     <!--CSS-->  
-     <link rel="stylesheet" href="cart.css">
+     <link rel="stylesheet" href="panier.css">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.1/css/all.min.css">
 
     <title>Panier</title>
@@ -17,7 +15,7 @@
             <div class="header-container">
                 <div class="nav">
                     <a href="index.html"><h1 class="nav__logo">Oricono</h1></a>
-                    <a href="cart.html"><div class="nav__cart">
+                    <a href="panier.html">
                         <i class="fas fa-shopping-cart"></i>
                     </a>
                     </div>
@@ -26,17 +24,18 @@
     </header>
     <main>
         <div class="container">
+            <img src="fond.jpg" id="fondecran" alt="fond">
             <div class="panier">
-                <h2 class="cart">Votre panier</h2>
+                <h2>Votre panier</h2>
                 <div class="commande">
                     <div class="recapitulatif">
-                        <div class="recap-produit first-line">Nom</div>
-                        <div class="recap-produit quantité first-line">Quantité</div>
-                        <div class="recap-produit prix first-line">Prix </div>
+                        <div class="recap-produit nom">Nom</div>
+                        <div class="recap-produit quantite">Quantité</div>
+                        <div class="recap-produit prix">Prix </div>
                     </div>   
                                      
                     <div class="panier-vide">
-                        <a href="cart.html">
+                        <a href="panier.html">
                             <div class="vider">
                                 Vider le panier
                             </div>
@@ -48,37 +47,27 @@
                 <div class="formulaire">
                     <h2>Votre adresse de livraison</h2>
                     <form class="form">
-                        <div class="nometprenom">
+                        
                             <div class="contact" id="bloc__name">
                                 <label for="name">Prénom :</label>
-                                <input type="text" placeholder="Prénom" id="prénom" name="user_name" required> 
+                                <input type="text" placeholder="Prénom" id="firstName" name="user_name" required> 
                             </div>
                             <div class="contact" id="bloc__lastname">
                                 <label for="lastname">Nom :</label>
-                                <input type="text" placeholder="Nom" id="nom" name="user_lastname" required>
+                                <input type="text" placeholder="Nom" id="lastName" name="user_lastname" required>
                             </div>
-                        </div>        
-                        <div class="postal-and-city">
-                            <div class="contact" id="bloc__postal">
-                                <label for="postal">Code postal :</label>
-                                <input type="text" placeholder="Code postal" id="postal" name="user_postal" required>
-                            </div>
+                               
                             <div class="contact" id="bloc__city">
                                 <label for="city">Ville :</label>
-                                <input type="text" placeholder="Ville" id="ville" name="user_city" required>
+                                <input type="text" placeholder="Ville" id="city" name="user_city" required>
                             </div>
-                        </div>
                         <div class="contact" id="bloc__adress">
                             <label for="adress">Adresse :</label>
-                            <input type="text" placeholder="Adresse de livraison" id="adresse" name="user_adress" required>
+                            <input type="text" placeholder="Adresse de livraison" id="address" name="user_adress" required>
                         </div>
                         <div class="contact" id="bloc__mail">
                             <label for="mail">Adresse mail :</label>
                             <input type="email" placeholder="Adresse mail" id="mail" name="user_mail" required>
-                        </div>
-                        <div class="contact" id="bloc__phone">
-                            <label for="phone" >Numéro de téléphone :</label>
-                            <input type="tel" placeholder="Numéro de téléphone" id="phone" name="phone" required >
                         </div>
                         <div class="erreur"></div>
                        
@@ -87,7 +76,7 @@
                         </div>
                     </form>
 
-                    <div class="added-to-cart-confirmation">
+                    <div class="confirmation">
                         <p class="confirmation-text"></p>
                     </div>
                     
@@ -95,7 +84,7 @@
                 </div>
             </div>
             <div class="vide">
-                <a href="index.html"><h2>Votre panier est vide !</a></h2>
+                <a href="index.html"><h4>Votre panier est vide !</h4></a>
             </div>
         </div>
     </main>
@@ -108,7 +97,7 @@
             </ul>
             </div> 
     </footer>
-    <script src="cart.js"></script>
+    <script src="panier.js"></script>
 
 </body>
 </html>

@@ -9,15 +9,22 @@ body {
     margin: auto;    
 }
 
+header {
+    position: relative;
+    top: 0;
+    height: 100%;
+    width: 100%;
+}
+
 
 
 .nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  background-color: aqua;
- padding-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  background-color: #9ed7f8;
+
 }
 
 
@@ -45,6 +52,7 @@ h2 {
     font-size: 30px;
     padding-top: 20px;
     padding-bottom: 20px;
+    position: relative;
 }
 
 img {
@@ -55,10 +63,23 @@ img {
     box-shadow: 5px 5px 5px 5px rgba(0, 0, 0, 0.603);
     }
  
+
+main #fondecran {
+    min-width: 1024px;
+   min-height: 100%;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    background-size: cover;
+    margin-top: -5px;
+    left: 0;
+    border-radius: 0;
+    
+}
 .bloc-produits {
-    background-color: rgb(233, 161, 221);
     display: flex;
     flex-direction: column;
+    background-color: black;
   }
 
  .produits {
@@ -68,7 +89,7 @@ img {
     flex-wrap: wrap;
     width: 90%;
     margin-bottom: 150px;
-    background-color: aqua;
+    position: relative;
     border-radius: 80px;
   }
 
@@ -85,19 +106,20 @@ img {
       margin-bottom: 20px;
       font-weight: bold;
       font-size: 18px;
+      color: white;
   }
 
 
 footer {
     width: 100%;
     height: 120px;
-    background-color: aqua;
-    position: absolute;
+    background-color: #9ed7f8;
+    position: relative;
     bottom: 0;
 }
 
 ul li {
-    padding-top: 10px;
+    padding-top: 20px;
     list-style-type: none;
 }
 
