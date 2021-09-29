@@ -7,7 +7,7 @@ function main() {
   affichePanier();
   totalPanier();
   viderPanier();
-  validationForm();
+  passerCommande();
 }
 
 function affichePanier() {
@@ -101,7 +101,7 @@ function viderPanier() {
   });
 }
 
-function validationForm() {
+function passerCommande() {
 
   /*On récupère les inputs depuis le DOM*/
 
@@ -111,28 +111,36 @@ function validationForm() {
   let inputCity = document.querySelector("#city");
   let inputAdress = document.querySelector("#address");
   let inputMail = document.querySelector("#mail");
-  let erreur = document.querySelector(".erreur");
+  
 
  /*Si l'un des champs n'est pas rempli, on empêche l'envoi du formulaire*/
 
+ function validerFormulaire(inputName, inputLastName, inputCity, inputAdress, inputMail) {
+  return !inputName.value ||
+    !inputLastName.value ||
+    !inputCity.value ||
+    !inputAdress.value ||
+    !inputMail.value;
+} 
+
   commande.addEventListener("click", (e) => {
     if (
-      !inputName.value ||
-      !inputLastName.value ||
-      !inputCity.value ||
-      !inputAdress.value ||
-      !inputMail.value 
+      validerFormulaire(inputName, inputLastName, inputCity, inputAdress, inputMail) 
     ) {
       erreur.innerHTML = "Tous les champs sont obligatoires !";
       e.preventDefault();
     } 
 
+   
+
     else {
   
-     /* Si le formulaire ets valide, on crée un tableau qui contiendra les produits commandés et les infos du client*/
+     /* Si le formulaire est valide, on crée un tableau qui contiendra les produits commandés et les infos du client*/
 
       let commandeProduits = [];
-      commandeProduits.push(copyOfLS);
+      copyOfLS.forEach(element => {
+      commandeProduits.push(element._id)
+      });;
 
       const order = {
         contact: {
@@ -142,9 +150,9 @@ function validationForm() {
           address: inputAdress.value,
           email: inputMail.value,
         },
-        products: commandeProduits,
+        products: commandeProduits
       };
-
+    
       /*Création de l'en-tête*/
 
       const options = {
@@ -152,9 +160,9 @@ function validationForm() {
         body: JSON.stringify(order),
         headers: { "Content-Type": "application/json" },
       };
-
-      /*Formatage du prix*/
       
+      /*Formatage du prix*/
+
       let ConfirmationPrix = document.querySelector(".total").innerText;
       ConfirmationPrix = ConfirmationPrix.split(" :");
 
@@ -165,7 +173,7 @@ function validationForm() {
         .then((data) => {
           localStorage.clear();
           console.log(data)
-          localStorage.setItem("numero", data.numero);
+          localStorage.setItem("numero", data.orderId);
           localStorage.setItem("total", ConfirmationPrix[1]);
 
           document.location.href = "confirmation.html";
@@ -174,3 +182,5 @@ function validationForm() {
       }
   });
   }
+
+

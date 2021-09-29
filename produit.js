@@ -12,18 +12,8 @@ const colorSelect = document.querySelector("#color-select");
 main();
 
 function main() {
-  checkIf404();
   getArticles();
   addToCart();
-}
-
-function checkIf404() {
-  window.addEventListener("error", (e) => {
-      let container = document.querySelector(".container");
-      container.innerHTML = `<p>Cette page n'existe pas.</p>`;
-    },
-    true
-  );
 }
 
 function getArticles() {
@@ -35,7 +25,7 @@ function getArticles() {
     .catch((error) => {
       let container = document.querySelector(".container");
       container.innerHTML =
-        "Nous n'avons pas réussi à afficher nos nounours. Avez-vous bien lancé le serveur local (Port 3000) ? <br>Si le problème persiste, contactez-nous.";
+        "Nous n'avons pas réussi à afficher la page. <br>Si le problème persiste, contactez-nous.";
       container.style.textAlign = "center";
       container.style.padding = "45vh 0";
     })
@@ -78,14 +68,29 @@ function addToCart() {
 
   
       let arrayProductsInCart = [];
-      
     
       if (localStorage.getItem("products") !== null) {
         arrayProductsInCart = JSON.parse(localStorage.getItem("products"));
      
       } 
 
+      /* Si l'élément existe dans le panier, on augmente la quantité*/
+
+      arrayProductsInCart.forEach(element => {
+        if(element._id==productAdded._id) {
+          element.quantity=element.quantity+productAdded.quantity;
+
+      } 
+      });
+
+      /* Si l'élément n'existe pas dans le panier, on le recherche et on le rajoute*/
+
+      const found = arrayProductsInCart.some(el => el._id === productAdded._id);
+      if (!found) {
         arrayProductsInCart.push(productAdded);
+      }
+      
+      
         localStorage.setItem("products", JSON.stringify(arrayProductsInCart));
       
       confirmation.style.visibility = "visible";
