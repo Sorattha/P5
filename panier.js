@@ -131,7 +131,6 @@ function passerCommande() {
       e.preventDefault();
     } 
 
-   
 
     else {
   
