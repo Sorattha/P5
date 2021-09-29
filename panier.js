@@ -115,23 +115,18 @@ function passerCommande() {
 
  /*Si l'un des champs n'est pas rempli, on empêche l'envoi du formulaire*/
 
- function validerFormulaire(inputName, inputLastName, inputCity, inputAdress, inputMail) {
-  return !inputName.value ||
+ commande.addEventListener("click", (e) => {
+  if (
+    !inputName.value ||
     !inputLastName.value ||
     !inputCity.value ||
     !inputAdress.value ||
-    !inputMail.value;
-} 
+    !inputMail.value
 
-  commande.addEventListener("click", (e) => {
-    if (
-      validerFormulaire(inputName, inputLastName, inputCity, inputAdress, inputMail) 
     ) {
       erreur.innerHTML = "Tous les champs sont obligatoires !";
       e.preventDefault();
     } 
-
-
     else {
   
      /* Si le formulaire est valide, on crée un tableau qui contiendra les produits commandés et les infos du client*/
