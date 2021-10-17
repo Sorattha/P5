@@ -93,9 +93,9 @@ function addToCart() {
       
         localStorage.setItem("products", JSON.stringify(arrayProductsInCart));
       
-      confirmation.style.visibility = "visible";
-      textConfirmation.innerHTML = `Vous avez ajouté ${nombre.value} nounours à votre panier !`;
-      setTimeout("location.reload(true);", 4000);
+        confirmation.style.visibility = "visible";
+        textConfirmation.innerHTML = `Vous avez ajouté ${nombre.value} nounours à votre panier !`;
+        setTimeout("location.reload(true);", 4000);
     }
   });
 }

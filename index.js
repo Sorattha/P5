@@ -28,8 +28,7 @@ function afficherProduits(articles, données) {
     let ficheProduit = document.createElement("div");
     document.querySelector(".produits").appendChild(ficheProduit);
     ficheProduit.classList.add("article");
-
-
+    
     /* Créer un lien  vers la fiche produit */
     let lien = document.createElement("a");
     ficheProduit.appendChild(lien);
